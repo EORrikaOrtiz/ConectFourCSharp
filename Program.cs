@@ -118,5 +118,71 @@ namespace ConectFour
         {
             Console.WriteLine("Hello Mahbub, for this activity I will work alone, sincerely Erika Ortiz ID 456980, and by the way this only one advance about my code statement");
         }
+
+         private bool CheckWin(char symbol)
+ {
+     for (int row = 0; row < rows; row++)
+     {
+         for (int column = 0; column <= columns - 4; column++)
+         {
+             if (board[row, column] == symbol &&
+                 board[row, column + 1] == symbol &&
+                 board[row, column + 2] == symbol &&
+                 board[row, column + 3] == symbol)
+             {
+                 return true;
+             }
+         }
+
+     }
+
+     for (int row = 0; row < rows - 4; row++)
+     {
+         for (int column = 0; column < columns; column++)
+         {
+             if (board[row, column] == symbol &&
+                 board[row + 1, column] == symbol &&
+                 board[row + 2, column] == symbol &&
+                 board[row + 3, column] == symbol)
+             {
+                 return true;
+             }
+         }
+
+     }
+
+     for (int row = 0; row <= rows - 4; row++)
+     {
+         for (int column = 0; column <= column - 4; column++)
+         {
+             if (board[row, column] == symbol &&
+                 board[row + 1, column + 1] == symbol &&
+                 board[row + 2, column + 2] == symbol &&
+                 board[row + 3, column + 3] == symbol)
+             {
+                 return true;
+             }
+         }
+
+     }
+
+     for (int row = 3; row <rows; row++)
+     {
+         for (int column = 0; column <= column - 4; column++)
+         {
+             if (board[row, column] == symbol &&
+                 board[row - 1, column + 1] == symbol &&
+                 board[row - 2, column + 2] == symbol &&
+                 board[row - 3, column + 3] == symbol)
+             {
+                 return true;
+             }
+         }
+
+     }
+
+     return false;
+
+ }
     }
 }
