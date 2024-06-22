@@ -1,0 +1,15 @@
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\bin\Debug\net8.0\ConsoleAttemp450.exe
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\bin\Debug\net8.0\ConsoleAttemp450.deps.json
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\bin\Debug\net8.0\ConsoleAttemp450.runtimeconfig.json
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\bin\Debug\net8.0\ConsoleAttemp450.dll
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\bin\Debug\net8.0\ConsoleAttemp450.pdb
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ConsoleAttemp450.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ConsoleAttemp450.AssemblyInfoInputs.cache
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ConsoleAttemp450.AssemblyInfo.cs
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ConsoleAttemp450.csproj.CoreCompileInputs.cache
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ConsoleAttemp450.sourcelink.json
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ConsoleAttemp450.dll
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\refint\ConsoleAttemp450.dll
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ConsoleAttemp450.pdb
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ConsoleAttemp450.genruntimeconfig.cache
+C:\Users\erika\OneDrive\Escritorio\Term 2\Objects Programing\FinalProjectErikaOrtiz\ConectFourCSharpErikaOrtiz\ConsoleAttemp450\ConsoleAttemp450\obj\Debug\net8.0\ref\ConsoleAttemp450.dll
