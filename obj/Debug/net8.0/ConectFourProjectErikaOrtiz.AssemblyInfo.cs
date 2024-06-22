@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConectFourProjectErikaOrtiz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42e1b0720b959b9b458ab09304a0578a053e6292")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a85e65c7df8c0e287267c0138c28dfa0f640334")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConectFourProjectErikaOrtiz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConectFourProjectErikaOrtiz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
