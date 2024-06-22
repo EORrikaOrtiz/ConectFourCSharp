@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConectFourProjectErikaOrtiz")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a85e65c7df8c0e287267c0138c28dfa0f640334")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2e7427a968503b60bcc3ed8f8f56e16c1e8bd91")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConectFourProjectErikaOrtiz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConectFourProjectErikaOrtiz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
