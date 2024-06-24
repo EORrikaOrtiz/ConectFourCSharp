@@ -7,14 +7,14 @@ namespace ConectFour
 {
     abstract class Player
     {
-        public abstract char Symbol { get; }
-        public abstract string playerName { get; }
+        public abstract char Symbol { get; set; }
+        public abstract string playerName { get; set; }
     }
 
     class HumanPlayer : Player
     {
-        public override char Symbol { get; }
-        public override string playerName { get; }
+        public override char Symbol { get; set; }
+        public override string playerName { get; set; }
 
         public HumanPlayer(char symbol, string name)
         {
@@ -25,8 +25,8 @@ namespace ConectFour
 
     class AIPlayer : Player
     {
-        public override char Symbol { get; }
-        public override string playerName { get; }
+        public override char Symbol { get; set; }
+        public override string playerName { get; set; }
 
         public AIPlayer(char symbol, string name)
         {
@@ -185,9 +185,11 @@ namespace ConectFour
                     char cell = board[row, column] == '\0' ? ' ' : board[row, column];
                     Console.Write($"| {cell} ");
                 }
+                
                 Console.WriteLine("|");
             }
-            Console.WriteLine("-----------------------------");
+           
+            Console.WriteLine("--------------------------------");
             Console.WriteLine("  1   2   3   4   5   6   7  ");
             Console.WriteLine("");
         }
@@ -202,7 +204,7 @@ namespace ConectFour
             
 
             while (!gameWon)
-            {
+            { 
 
                 Player currentPlayer = players[currentPlayerIndex];
                 PrintBoard(currentPlayer.playerName);
