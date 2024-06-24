@@ -1,5 +1,3 @@
-﻿
-
 using System;
 using System.Data.Common;
 
@@ -13,26 +11,26 @@ namespace ConectFour
 
     class HumanPlayer : Player
     {
-        public override char Symbol { get; }
+        public override char Symbol {  get; }
         public override string playerName { get; }
 
         public HumanPlayer(char symbol, string name)
         {
             Symbol = symbol;
             playerName = name;
-        }
+        }      
     }
 
-    class AIPlayer : Player
+     class AIPlayer : Player
     {
         public override char Symbol { get; }
         public override string playerName { get; }
-
+       
         public AIPlayer(char symbol, string name)
         {
             Symbol = symbol;
             playerName = name;
-        }
+        }      
     }
 
     class GameException : Exception
@@ -51,7 +49,7 @@ namespace ConectFour
     }
     class ConnectFour
     {
-
+        
         private int rows = 6;
         private int columns = 7;
         private char[,] board;
@@ -62,7 +60,7 @@ namespace ConectFour
 
         public ConnectFour(Player player1, Player player2)
         {
-
+           
             board = new char[rows, columns];
             players = new Player[] { player1, player2 };
             currentPlayerIndex = 0;
@@ -87,20 +85,19 @@ namespace ConectFour
 
             throw new ColumnFullException();
         }
-        
-      
+
         private int GetMove()
         {
             int column;
             while (true)
             {
                 Console.WriteLine("\nEnter column (1-7): ");
-                if (int.TryParse(Console.ReadLine(), out column) && column >= 1 && column <= 7)
+                if (int.TryParse(Console.ReadLine(), out column) && column >= 0 && column < columns)
                 {
                     break;
                 }
 
-                Console.WriteLine("\nInvalid input. Please enter a column number between 1 and 7.");
+                Console.WriteLine("\nInvalid input. Please enter a column number between 0 and 6.");
             }
             return column - 1;
         }
@@ -171,11 +168,11 @@ namespace ConectFour
             return false;
 
         }
-
+   
 
         private void PrintBoard(string Name)
         {
-
+         
             Console.WriteLine();
 
             for (int row = 0; row < rows; row++)
@@ -192,83 +189,59 @@ namespace ConectFour
             Console.WriteLine("");
         }
 
-        public void PlayGame()
-        {
-            bool gameWon = false;
-            bool gameEnded = false;
-            int turnCount = 0;
-            int totalMoves = 0;
-            string Name;
-            
-
-            while (!gameWon)
+            public void PlayGame()
             {
+                bool gameWon = false;
+                int turnCount = 0;
+                string Name;
 
-                Player currentPlayer = players[currentPlayerIndex];
-                PrintBoard(currentPlayer.playerName);
-                Console.WriteLine($"\n{currentPlayer.playerName}'s turn, your symbol is: {currentPlayer.Symbol}");
-                int column = GetMove();
-
-                try
+                while (!gameWon)
                 {
-                    MakeMove(column, currentPlayer.Symbol);
-                    totalMoves++;
+                    
+                    Player currentPlayer = players[currentPlayerIndex];
+                    PrintBoard(currentPlayer.playerName);
+                    Console.WriteLine($"\n{currentPlayer.playerName}'s turn, your symbol is: {currentPlayer.Symbol}");
+                    int column = GetMove();
 
-                    if (CheckWin(currentPlayer.Symbol))
+                    try
                     {
-                        PrintBoard(currentPlayer.playerName);
-                        Console.WriteLine($"\n{currentPlayer.playerName} you are the winner :) !");
-                        gameWon = true;
-                    }
-
-                    if (totalMoves == 42) // Total number of cells in a 6x7 board
+                        MakeMove(column, currentPlayer.Symbol);
+                        if (CheckWin(currentPlayer.Symbol))
                         {
                             PrintBoard(currentPlayer.playerName);
-                            Console.WriteLine("It's a draw! no one wins...");
-                            return;
+                            Console.WriteLine($"\n{currentPlayer.playerName} wins!");
+                            gameWon = true;
                         }
-                    currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
-                }
-                catch (GameException ex)
-                {
-                    Console.WriteLine(ex.Message);
+                        currentPlayerIndex = (currentPlayerIndex + 1) % players.Length;
+                    }
+                    catch (GameException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
             }
-        }
-        
-        static bool PrompRestart(string message)
-        {
-           Console.WriteLine(message);
-            string input = Console.ReadLine().Trim().ToLower();
 
-            return input == "yes"; //|| input == "no";
-        }
-
-        static void Main(string[] args)
-        {
-            Console.WriteLine("\nFinal Project Conect Four by Erika Ortiz\nWelcome to the game!\n");
-            do 
+            static void Main(string[] args)
             {
-                Console.WriteLine("Please enter your name:\n");
-                string playerName1 = Console.ReadLine();
+                Console.WriteLine("\nFinal Project Conect Four by Erika Ortiz\n\nWelcome to the game!\n");
 
-                Player player1 = new HumanPlayer('X', playerName1);
-                Console.WriteLine($"\n{playerName1} you are player 1...\n");
+            Console.WriteLine("\nPlease enter your name:\n");
+            string playerName1 = Console.ReadLine();
 
-                Console.Write("Please enter your name:\n");
-                string playerName2 = Console.ReadLine();
+            Player player1 = new HumanPlayer('X', playerName1);
+            Console.WriteLine($"\n{playerName1} you are player 1...\n");
 
-                Player player2 = new HumanPlayer('O', playerName2);
-                Console.WriteLine($"\n{playerName2} you are player 2...\n");
+            Console.Write("\nPlease enter your name:\n");
+            string playerName2 = Console.ReadLine();
 
+            Player player2= new HumanPlayer('O', playerName2);
+            Console.WriteLine($"\n{playerName2} you are player 2...\n");
+           
                 ConnectFour game = new ConnectFour(player1, player2);
-                game.PlayGame(); 
+                game.PlayGame();
 
-            } while (PrompRestart("Do you want to play again? (yes/no): "));
-            
-
-            Console.Write("\nThank you for playing Connect Four! Press any key to exit...");
+            Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
+            }
         }
     }
-}
