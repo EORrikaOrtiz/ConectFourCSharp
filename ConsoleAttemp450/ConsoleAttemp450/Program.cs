@@ -21,19 +21,7 @@ namespace ConectFour
             Symbol = symbol;
             playerName = name;
         }
-    }
-
-    class AIPlayer : Player
-    {
-        public override char Symbol { get; set; }
-        public override string playerName { get; set; }
-
-        public AIPlayer(char symbol, string name)
-        {
-            Symbol = symbol;
-            playerName = name;
-        }
-    }
+    } 
 
     class GameException : Exception
     {
@@ -42,12 +30,12 @@ namespace ConectFour
 
     class ColumnFullException : GameException
     {
-        public ColumnFullException() : base("\nThis column is full. Choose another column.") { }
+        public ColumnFullException() : base("\nThis column is full! Please choose another column...") { }
     }
 
     class InvalidMoveException : GameException
     {
-        public InvalidMoveException() : base("\nInvalid move. Try again.") { }
+        public InvalidMoveException() : base("\nInvalid move! Try again...") { }
     }
     class ConnectFour
     {
@@ -55,7 +43,6 @@ namespace ConectFour
         private int rows = 6;
         private int columns = 7;
         private char[,] board;
-        private bool PlayerTurn = true;
         private Player[] players;
         private int currentPlayerIndex;
         public string Name;
@@ -94,13 +81,13 @@ namespace ConectFour
             int column;
             while (true)
             {
-                Console.WriteLine("\nEnter column (1-7): ");
+                Console.WriteLine("\nChoose a column from 1 to 7 :\n ");
                 if (int.TryParse(Console.ReadLine(), out column) && column >= 1 && column <= 7)
                 {
                     break;
                 }
 
-                Console.WriteLine("\nInvalid input. Please enter a column number between 1 and 7.");
+                Console.WriteLine("\nInvalid input! Please enter a column number between 1 and 7...");
             }
             return column - 1;
         }
@@ -183,20 +170,20 @@ namespace ConectFour
                 for (int column = 0; column < columns; column++)
                 {
                     char cell = board[row, column] == '\0' ? ' ' : board[row, column];
-                    Console.Write($"| {cell} ");
+                    Console.Write($"|_|{cell}");
                 }
                 
                 Console.WriteLine("|");
             }
            
-            Console.WriteLine("--------------------------------");
-            Console.WriteLine("  1   2   3   4   5   6   7  ");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("   1   2   3   4   5   6   7  ");
             Console.WriteLine("");
         }
 
         public void PlayGame()
         {
-            bool gameWon = false;
+            bool gameWon = false;   
             bool gameEnded = false;
             int turnCount = 0;
             int totalMoves = 0;
@@ -248,7 +235,7 @@ namespace ConectFour
 
         static void Main(string[] args)
         {
-            Console.WriteLine("\nFinal Project Conect Four by Erika Ortiz\nWelcome to the game!\n");
+            Console.WriteLine("\nFinal Project Conect Four by Erika Ortiz\n\nWelcome to the game!\n");
             do 
             {
                 Console.WriteLine("Please enter your name:\n");
